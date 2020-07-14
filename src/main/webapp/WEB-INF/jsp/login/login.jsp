@@ -12,8 +12,8 @@
                 <form action="login" method="post" class="form-signin">
                     <br/>
                     <img class="mb-4" src="assets/icons/login.svg" alt="" width="100" height="100">
-                    <label for="userName" class="sr-only">Login</label>
-                    <input type="text" id="userName" name="credentials.userName" class="form-control" placeholder="email@email.com"/> 
+                    <label for="userEmail" class="sr-only">Login</label>
+                    <input type="text" id="userEmail" name="credentials.userEmail" class="form-control" placeholder="email@email.com"/> 
                     <br/>
                     <label for="password" class="sr-only">Password</label>
                     <input type="password" id="password" name="credentials.password"class="form-control" placeholder="password">

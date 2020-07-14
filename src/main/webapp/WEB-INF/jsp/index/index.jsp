@@ -9,10 +9,10 @@
         </head>
         <body>
         <%--nav--%>
-        <jsp:include page="../common/navIndex.jsp"></jsp:include>
+        <jsp:include page="../common/menuIndex.jsp"></jsp:include>
 
         <%--carousel--%>
-        <jsp:include page="../common/carousel.jsp"></jsp:include>
+        <jsp:include page="../common/carouselIndex.jsp"></jsp:include>
 
             <div class="p-md-5 text-center bg-white">
                 <div class="col-md-5 p-lg-5 mx-auto my-5">

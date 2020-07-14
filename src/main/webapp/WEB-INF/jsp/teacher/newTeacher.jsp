@@ -19,14 +19,17 @@
             <%--Menu Superior--%>
             <jsp:include page="../common/menuHoSu.jsp"></jsp:include>
 
+                <h2 class="mb-4">Novo Professor</h2>
                 <div>
-                <%--carousel--%>
-                <jsp:include page="../common/carouselIndex.jsp"></jsp:include>
+                    <form>
+                        
+                        
+                    </form>
                 </div>
             </div>
 
         <%--javaScript--%>
         <jsp:include page="../common/js.jsp"></jsp:include>
-        <script src="assets/js/main.js"></script>
+        <script src="assets/js/main.js"></script>       
     </body>
 </html>
