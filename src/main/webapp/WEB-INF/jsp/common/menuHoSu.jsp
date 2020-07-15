@@ -21,7 +21,7 @@
                     <a class="nav-link" href="#">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/signout">Sair</a>
                 </li>
             </ul>
         </div>

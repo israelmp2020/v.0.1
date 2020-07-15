@@ -4,15 +4,15 @@ import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Result;
-import br.com.components.LoginSession;
+import br.com.components.LoginStudentSession;
 import br.com.domain.Credentials;
 import javax.inject.Inject;
 
 @Controller
-public class LoginController {
+public class LoginStudentController {
 
     @Inject
-    private LoginSession loginSession;
+    private LoginStudentSession loginStudentSession;
 
     @Inject
     private Result result;
@@ -26,10 +26,10 @@ public class LoginController {
     public void authenticate(Credentials credentials) {
 
         if (credentials.getUserEmail().equalsIgnoreCase("email@email.com")
-                && credentials.getPassword().equals("12345")) {
-            loginSession.setUserEmail(credentials.getUserEmail());
-            loginSession.setIsLogged(true);
-            result.redirectTo(HomeController.class).home();
+                && credentials.getPassword().equals("123")) {
+            loginStudentSession.setUserEmail(credentials.getUserEmail());
+            loginStudentSession.setIsLogged(true);
+            result.redirectTo(HomeStudentController.class).homeStudent();
         } else {
             result.include("loginErrorMsg", "Login inválido!");
             result.redirectTo(this).login();
@@ -38,7 +38,7 @@ public class LoginController {
 
     @Get("signout")
     public void signout() {
-        loginSession.signout();
+         loginStudentSession.signout();
         result.redirectTo(this).login();
     }
 }

@@ -5,7 +5,6 @@
         <%--CSS bootstrap--%>
         <jsp:include page="../common/head.jsp"></jsp:include>
         <link href="${pageContext.request.contextPath}/assets/css/home.css" rel="stylesheet"/>
-        <link href="${pageContext.request.contextPath}/assets/js/main.js" rel="stylesheet"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Página Inicial</title>
     </head>

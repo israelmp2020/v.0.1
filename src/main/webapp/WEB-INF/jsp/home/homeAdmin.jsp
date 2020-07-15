@@ -5,7 +5,6 @@
         <%--CSS bootstrap--%>
         <jsp:include page="../common/head.jsp"></jsp:include>
         <link href="${pageContext.request.contextPath}/assets/css/home.css" rel="stylesheet"/>
-        <link href="${pageContext.request.contextPath}/assets/js/main.js" rel="stylesheet"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Página Inicial</title>
     </head>
@@ -19,12 +18,9 @@
             <%--Menu Superior--%>
             <jsp:include page="../common/menuHoSu.jsp"></jsp:include>
 
-                <h2 class="mb-4">Novo Aluno</h2>
                 <div>
-                    <form>
-                        
-                        
-                    </form>
+                <%--carousel--%>
+                <jsp:include page="../common/carouselIndex.jsp"></jsp:include>
                 </div>
             </div>
 

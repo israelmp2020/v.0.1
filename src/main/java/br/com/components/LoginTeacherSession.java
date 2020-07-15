@@ -4,7 +4,7 @@ import java.io.Serializable;
 import javax.enterprise.context.SessionScoped;
 
 @SessionScoped
-public class LoginSession implements Serializable {
+public class LoginTeacherSession implements Serializable {
 
     private boolean isLogged;
     private String userEmail;
