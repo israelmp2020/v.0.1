@@ -5,28 +5,28 @@ import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.controller.ControllerMethod;
 import br.com.caelum.vraptor.core.InterceptorStack;
 import br.com.caelum.vraptor.interceptor.Interceptor;
-import br.com.components.LoginAdminSession;
-import br.com.controllers.LoginAdminController;
 import javax.inject.Inject;
 import br.com.annotations.LoginStudent;
+import br.com.components.LoginStudentSession;
+import br.com.controllers.LoginStudentController;
 
 @Intercepts
 public class LoginStudentIntercepts1 implements Interceptor {
 
     @Inject
-    private LoginAdminSession loginAdminSession;
+    private LoginStudentSession loginStudentSession;
 
     @Inject
     private Result result;
 
     @Override
     public void intercept(InterceptorStack is, ControllerMethod cm, Object o) {
-        System.out.println("loginAdminSession" + loginAdminSession.isLogged());
-        if (loginAdminSession.isLogged()) {
+        System.out.println("loginStudentSession" + loginStudentSession.isLogged());
+        if (loginStudentSession.isLogged()) {
             is.next(cm, o);
         } else {
-            loginAdminSession.signout();
-            result.redirectTo(LoginAdminController.class).login();
+            loginStudentSession.signout();
+            result.redirectTo(LoginStudentController.class).loginStudent();
         }
     }
 

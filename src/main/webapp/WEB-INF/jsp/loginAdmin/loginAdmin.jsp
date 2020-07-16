@@ -9,14 +9,14 @@
         <title>Faça login</title>
     </head>
     <body class="text-center">
-                <form action="login" method="post" class="form-signin">
+                <form action="login-admin" method="post" class="form-signin">
                     <br/>
                     <img class="mb-4" src="assets/icons/login.svg" alt="" width="100" height="100">
                     <label for="userEmail" class="sr-only">Login</label>
-                    <input type="text" id="userEmail" name="credentials.userEmail" class="form-control" placeholder="email@email.com"/> 
+                    <input type="text" id="userEmail" name="credentialsAdmin.userEmail" class="form-control" placeholder="email@email.com"/> 
                     <br/>
                     <label for="password" class="sr-only">Password</label>
-                    <input type="password" id="password" name="credentials.password"class="form-control" placeholder="password">
+                    <input type="password" id="password" name="credentialsAdmin.password"class="form-control" placeholder="password">
                     <br/>
                     <button class="btn btn-lg btn-primary btn-block" type="submit" style="background:#044da1; border: none;">Entrar</button>
                     <p style='color:red;'>

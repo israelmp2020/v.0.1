@@ -9,7 +9,7 @@ import br.com.annotations.LoginStudent;
 @Controller
 public class HomeAdminController {
 
-    @Path("home")
+    @Path("home-admin")
     public void homeAdmin() {
 
     }

@@ -5,7 +5,7 @@ import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Result;
 import br.com.components.LoginAdminSession;
-import br.com.domain.Credentials;
+import br.com.domain.CredentialsAdmin;
 import javax.inject.Inject;
 
 @Controller
@@ -17,28 +17,28 @@ public class LoginAdminController {
     @Inject
     private Result result;
 
-    @Get("login")
-    public void login() {
+    @Get("login-admin")
+    public void loginAdmin() {
 
     }
 
-    @Post("login")
-    public void authenticate(Credentials credentials) {
+    @Post("login-admin")
+    public void authenticate(CredentialsAdmin credentialsAdmin) {
 
-        if (credentials.getUserEmail().equalsIgnoreCase("email@email.com")
-                && credentials.getPassword().equals("123")) {
-            loginAdminSession.setUserEmail(credentials.getUserEmail());
+        if (credentialsAdmin.getUserEmail().equalsIgnoreCase("email@email.com")
+                && credentialsAdmin.getPassword().equals("123")) {
+            loginAdminSession.setUserEmail(credentialsAdmin.getUserEmail());
             loginAdminSession.setIsLogged(true);
             result.redirectTo(HomeAdminController.class).homeAdmin();
         } else {
             result.include("loginErrorMsg", "Login inválido!");
-            result.redirectTo(this).login();
+            result.redirectTo(this).loginAdmin();
         }
     }
 
-    @Get("signout")
+    @Get("signout-admin")
     public void signout() {
         loginAdminSession.signout();
-        result.redirectTo(this).login();
+        result.redirectTo(this).loginAdmin();
     }
 }

@@ -11,9 +11,9 @@ import br.com.annotations.LoginStudent;
 public class TeacherAdminController {
     
     @Get("novo")
-    public void newTeacher() {
+    public void newTeacherAdmin() {
     }
     @Get("lista")
-    public void listTeacher() {
+    public void listTeacherAdmin() {
     }
 }

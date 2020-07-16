@@ -9,24 +9,26 @@ import br.com.components.LoginAdminSession;
 import br.com.controllers.LoginAdminController;
 import javax.inject.Inject;
 import br.com.annotations.LoginStudent;
+import br.com.components.LoginTeacherSession;
+import br.com.controllers.LoginTeacherController;
 
 @Intercepts
 public class LoginTeacherIntercepts implements Interceptor {
 
     @Inject
-    private LoginAdminSession loginAdminSession;
+    private LoginTeacherSession loginTeacherSession;
 
     @Inject
     private Result result;
 
     @Override
     public void intercept(InterceptorStack is, ControllerMethod cm, Object o) {
-        System.out.println("loginAdminSession" + loginAdminSession.isLogged());
-        if (loginAdminSession.isLogged()) {
+        System.out.println("loginStudenSession" + loginTeacherSession.isLogged());
+        if (loginTeacherSession.isLogged()) {
             is.next(cm, o);
         } else {
-            loginAdminSession.signout();
-            result.redirectTo(LoginAdminController.class).login();
+            loginTeacherSession.signout();
+            result.redirectTo(LoginTeacherController.class).loginTeacher();
         }
     }
 

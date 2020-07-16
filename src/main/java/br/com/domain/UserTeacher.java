@@ -1,11 +1,11 @@
 package br.com.domain;
 
-public class User {
+public class UserTeacher {
 
     String email;
     String password;
 
-    public User(String email, String password) {
+    public UserTeacher(String email, String password) {
         this.email = email;
         this.password = password;
     }

@@ -1,11 +1,11 @@
 package br.com.domain;
 
-public class Credentials {
+public class CredentialsStudent {
 
     String userEmail;
     String password;
 
-    public Credentials() {
+    public CredentialsStudent() {
     }
 
     public String getUserEmail() {

@@ -26,7 +26,7 @@ public class LoginAdminIntercepts implements Interceptor {
             is.next(cm, o);
         } else {
             loginAdminSession.signout();
-            result.redirectTo(LoginAdminController.class).login();
+            result.redirectTo(LoginAdminController.class).loginAdmin();
         }
     }
 

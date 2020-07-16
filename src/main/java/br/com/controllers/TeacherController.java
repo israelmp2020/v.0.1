@@ -7,13 +7,13 @@ import br.com.annotations.LoginStudent;
 
 @LoginStudent
 @Controller
-@Path("estudante")
-public class StudentAdminController {
-
+@Path("professor")
+public class TeacherController {
+    
     @Get("novo")
-    public void newStudentAdmin() {
+    public void newTeacher() {
     }
     @Get("lista")
-    public void listStudentAdmin() {
+    public void listTeacher() {
     }
 }
